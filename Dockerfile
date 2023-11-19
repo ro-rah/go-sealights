@@ -37,7 +37,7 @@ RUN echo "$SEALIGHTS_TOKEN" > ./sltoken.txt
 RUN ./slcli config init --lang go --token ./sltoken.txt
 RUN ./slcli config create-bsid --app $APP_NAME --branch $BRANCH_NAME --build $BUILD_NAME
 RUN ./slcli scan --bsid buildSessionId.txt --path-to-scanner ./slgoagent --workspacepath ./ --scm git --scmVersion "0" --scmProvider github --disable-on-init true
-RUN go build -o main .
+RUN go build ./go-sealights
 
 # Expose port 8080 for the application
 EXPOSE 8080
