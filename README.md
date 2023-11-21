@@ -5,3 +5,8 @@ $ docker build -t go-sealights --build-arg SEALIGHTS_TOKEN=<yourtoken> --build-a
 
 # run
 docker run -p 8080:8080 docker.io/library/go-sealights  
+
+# endpoint access
+http://localhost:8080/method<A-J>
+ex. for method C:
+http://localhost:8080/methodC
