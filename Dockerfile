@@ -43,4 +43,4 @@ RUN go build -o gosealights ./go-sealights
 EXPOSE 8080
 
 # Command to run the executable with SeaLights agent
-CMD ["sealights-go", "run", "./main"]
+CMD ["./gosealights", "run", "./main"]
