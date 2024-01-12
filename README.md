@@ -6,6 +6,9 @@ $ docker build -t go-sealights --progress=plain --build-arg SEALIGHTS_TOKEN=<you
 # run
 docker run -p 8080:8080 docker.io/library/go-sealights  
 
+# run with SEALIGHTS enabled
+docker run -e SEALIGHTS_DISABLE_ON_INIT=false -p 8080:8080 docker.io/library/go-sealights
+
 # endpoint access
 http://localhost:8080/method<A-J>
 ex. for method C:
