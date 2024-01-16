@@ -36,7 +36,8 @@ ENV BUILD_NAME=${BUILD_NAME}
 RUN echo "$SEALIGHTS_TOKEN" > ./sltoken.txt
 RUN ./slcli config init --lang go --token ./sltoken.txt
 RUN ./slcli config create-bsid --app $APP_NAME --branch $BRANCH_NAME --build $BUILD_NAME
-RUN ./slcli scan --bsid buildSessionId.txt --path-to-scanner ./slgoagent --workspacepath ./ --scm git --scmVersion "0" --scmProvider github --disable-on-init true
+#RUN ./slcli scan --bsid buildSessionId.txt --path-to-scanner ./slgoagent --workspacepath ./ --scm git --scmVersion "0" --scmProvider github --disable-on-init true
+RUN ./slcli scan --bsid buildSessionId.txt --path-to-scanner ./slgoagent --workspacepath ./ --scm git --scmVersion 7.21.10 --scmBaseUrl https://bitbucket-eng-sjc1.cisco.com/bitbucket/projects/AN/gobi/browse --scmProvider Bitbucket --disable-on-init true
 RUN go build -o gosealights ./go-sealights 
 
 # Expose port 8080 for the application
