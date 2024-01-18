@@ -13,3 +13,6 @@ docker run -e SEALIGHTS_DISABLE_ON_INIT=false -e SEALIGHTS_LAB_ID=docker_go_seal
 http://localhost:8080/method<A-J>
 ex. for method C:
 http://localhost:8080/methodC
+
+#instpect container
+docker run -it --entrypoint sh docker.io/library/go-sealights
