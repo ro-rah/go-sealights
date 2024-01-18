@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Frontend</title>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h1>AngularJS Frontend</h1>
+
+    <!-- Buttons for each endpoint -->
+    <button ng-repeat="endpoint in endpoints" ng-click="callEndpoint(endpoint.toLowerCase())">{{endpoint}}</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>
