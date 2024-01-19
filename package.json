@@ -1,0 +1,10 @@
+{
+  "name": "my-frontend-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "copyfiles -u 1 ./index.html ./frontend.js ./dist"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
